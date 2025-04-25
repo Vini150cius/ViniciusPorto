@@ -128,6 +128,7 @@ main {
   max-width: 1200px;
   width: 100%;
   height: 500px;
+  margin: 0 15px;
 }
 .myPresentation {
   margin: 100px 0;
@@ -195,7 +196,7 @@ main {
 .projects {
   display: flex;
   justify-content: center;
-  background-color: pink;
+  background-color: var(--backgroundSecundary);
 }
 .containerProjects {
   display: flex;
@@ -206,6 +207,7 @@ main {
   padding: 150px 0;
 }
 .containerProjects h1 {
+  margin: 0 0 20px 0;
   text-align: center;
   font-size: 25pt;
   font-family: "Lexend", sans-serif;
@@ -219,6 +221,7 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   margin-top: 20px;
+  margin: 0 15px;
 }
 
 .cardProject {
@@ -276,13 +279,13 @@ main {
   border-radius: 5px;
   font-size: 10pt;
   font-family: "Inter", sans-serif;
+  margin: 10px 0;
 }
 
 .cardProject .containerBtns {
   display: flex;
   justify-content: space-around;
   padding: 10px;
-  background-color: var(--backgroundPrimary);
 }
 
 .cardProject .containerBtns .btnDemo {
@@ -332,8 +335,137 @@ main {
 .cardProject .containerBtns button span {
   font-size: 12pt;
 }
+.certificates {
+  display: flex;
+  justify-content: center;
+  background-color: var(--backgroundPrimary);
+}
+.containerCertificates {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  width: 100%;
+  height: auto;
+  padding: 150px 0;
+}
+.containerCertificates .containerCard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  margin: 0 15px;
+}
+
+.containerCertificates h1 {
+  margin: 0 0 20px 0;
+  text-align: center;
+  font-size: 25pt;
+  font-family: "Lexend", sans-serif;
+}
+.containerCertificates span {
+  margin-right: 10px;
+  font-size: 25pt;
+}
+.cardCertificates .containerIcon{
+  display: block;
+}
+.cardCertificates {
+  background-color: var(--backgroundSecundary);
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: 1s all;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cardCertificates:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cardCertificates h1 {
+  font-size: 18pt;
+  font-family: "Lexend", sans-serif;
+}
+
+.cardCertificates p {
+  font-size: 14pt;
+  font-family: "Inter", sans-serif;
+  color: #555;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cardCertificates .locate {
+  font-size: 14pt;
+  font-family: "Inter", sans-serif;
+  color: var(--btnColor);
+  margin-bottom: 15px;
+}
+.cardCertificates .date {
+  font-size: 12pt;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 25px;
+}
+.cardCertificates .calendar {
+  font-size: 13pt;
+}
+
+.cardCertificates  .license {
+  background-color: var(--btnColor);
+  color: #fff;
+  padding: 10px 10px;
+  border-radius: 100%;
+  font-size: 20pt;
+  margin: 15px 0;
+}
+.cardCertificates  .skills {
+  align-items: center;
+}
+.cardCertificates  .skills span {
+  display: inline-block;
+  background-color: var(--btnColor);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 10pt;
+  font-family: "Inter", sans-serif;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+.cardCertificates .btnCertView {
+  border: none;
+  border-radius: 10px;
+  background-color: var(--btnColor);
+  padding: 10px 15px;
+  font-size: 12pt;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  transition: 0.5s all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  gap: 10px;
+}
+
+.cardCertificates .btnCertView:hover {
+  transform: scale(1.02);
+}
+.cardCertificates .btnCertView span {
+  font-size: 14pt;
+  color: rgb(255, 255, 255);
+}
 
 @media screen and (max-width: 970px) and (min-width: 600px) {
+  .myPhoto img {
+    width: 80%;
+  }
   .navbar-logo {
     display: flex;
     justify-content: center;
@@ -359,6 +491,9 @@ main {
   }
 }
 @media screen and (max-width: 600px) {
+  .myPhoto img {
+    width: 100%;
+  }
   .navbar-logo {
     display: flex;
     justify-content: center;
