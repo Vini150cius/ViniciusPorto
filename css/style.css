@@ -2,9 +2,10 @@
   --navBack: rgba(5, 25, 38, 0.877);
   --navTextHover: #00c6ff;
   --navText: #f0f6f6ff;
-  --backgroundPrimary: #f0f6f6ff;
+  --backgroundPrimary: rgb(221, 224, 226);
   --backgroundSecundary: #f5f5f5;
   --btnColor: #0072ff;
+  --btnColorSecundary: #284c63;
 }
 
 * {
@@ -110,7 +111,7 @@
   color: var(--navTextHover);
 }
 
-main {
+.main {
   padding-top: 60px;
   display: block;
   justify-content: center;
@@ -273,7 +274,7 @@ main {
 
 .cardProject .content span {
   display: inline-block;
-  background-color: var(--btnColor);
+  background-color: var(--btnColorSecundary);
   color: #fff;
   padding: 5px 10px;
   border-radius: 5px;
@@ -361,12 +362,13 @@ main {
   text-align: center;
   font-size: 25pt;
   font-family: "Lexend", sans-serif;
+  
 }
 .containerCertificates span {
   margin-right: 10px;
   font-size: 25pt;
 }
-.cardCertificates .containerIcon{
+.cardCertificates .containerIcon {
   display: block;
 }
 .cardCertificates {
@@ -415,7 +417,7 @@ main {
   font-size: 13pt;
 }
 
-.cardCertificates  .license {
+.cardCertificates .license {
   background-color: var(--btnColor);
   color: #fff;
   padding: 10px 10px;
@@ -423,12 +425,12 @@ main {
   font-size: 20pt;
   margin: 15px 0;
 }
-.cardCertificates  .skills {
+.cardCertificates .skills {
   align-items: center;
 }
-.cardCertificates  .skills span {
+.cardCertificates .skills span {
   display: inline-block;
-  background-color: var(--btnColor);
+  background-color: var(--btnColorSecundary);
   color: #fff;
   padding: 5px 10px;
   border-radius: 5px;
@@ -461,7 +463,214 @@ main {
   font-size: 14pt;
   color: rgb(255, 255, 255);
 }
+.pageSorry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--backgroundPrimary);
+}
+.containerSorry {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--btnColorSecundary);
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 12pt;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+}
+.containerSorry a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14pt;
+  font-family: "Inter", sans-serif;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--btnColor);
+  transition: all 0.3s;
+}
+.containerSorry a:hover {
+  transform: scale(1.02);
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  background-color: var(--background);
+}
+.containerContact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  height: auto;
+  padding: 50px 0;
+}
 
+.contact h1 {
+  font-size: 24pt;
+  font-family: "Lexend", sans-serif;
+  margin-bottom: 20px;
+  color: var(--btnColor);
+}
+
+.contact p {
+  font-size: 14pt;
+  font-family: "Inter", sans-serif;
+  color: #000000;
+  text-align: center;
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+.contact .containerContactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.contact .containerContactInfo div {
+  display: flex;
+  align-items: center;
+
+  padding: 10px 15px;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 14pt;
+}
+
+.contact .containerContactInfo div p {
+  margin: 0;
+  font-weight: 600;
+  min-width: 70px;
+  text-align: left;
+}
+
+.contact .containerContactInfo div a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.contact .containerContactInfo div a:hover {
+  color: var(--btnColor);
+}
+
+.contact .containerContactInfo div span {
+  font-size: 20pt;
+  color: #ffffff;
+}
+
+.contact .containerForm {
+  width: 100%;
+  max-width: 600px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px -1px 26px -7px rgba(0, 0, 0, 0.32);
+}
+
+.contact .containerInput {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1.5px solid var(--btnColorSecundary);
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 14pt;
+  resize: vertical;
+  transition: border-color 0.3s;
+}
+.contact textarea {
+  width: auto;
+}
+
+.contact input[type="text"]:focus,
+.contact input[type="email"]:focus,
+.contact textarea:focus {
+  outline: none;
+  border-color: var(--btnColor);
+}
+
+.contact button[type="submit"] {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  background-color: var(--btnColor);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 25px;
+  font-family: "Inter", sans-serif;
+  font-size: 14pt;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0px -1px 26px -7px rgba(0, 0, 0, 0.32);
+}
+
+.contact button[type="submit"]:hover {
+  background-color: #005bb5;
+  transform: scale(1.01);
+}
+
+.contact .iconSquare {
+  background-color: var(--btnColor);
+  border-radius: 10px;
+}
+
+.contact .contactInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.contact .contactInfo p,
+.contact .contactInfo a {
+  display: block;
+  width: 100%;
+}
+.contact h1 {
+  margin: 0 0 20px 0;
+  text-align: center;
+  font-size: 25pt;
+  font-family: "Lexend", sans-serif;
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+.contact span {
+  margin-right: 10px;
+  font-size: 25pt;
+}
 @media screen and (max-width: 970px) and (min-width: 600px) {
   .myPhoto img {
     width: 80%;
@@ -483,11 +692,32 @@ main {
   }
 
   .navbar-links ul li {
-    margin: 0 0 0 0;
+    margin: 0;
   }
 
   .navbar-links ul {
-    margin: 0 0 0 0;
+    margin: 0;
+  }
+
+  .contact {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 80px 40px;
+  }
+
+  .contact p {
+    text-align: left;
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .containerContact {
+    display: block;
+  }
+
+  .contact .containerForm {
+    max-width: 100%;
   }
 }
 @media screen and (max-width: 600px) {
@@ -498,8 +728,8 @@ main {
     display: flex;
     justify-content: center;
     align-content: center;
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
+    margin: 0;
+    padding: 0;
   }
 
   .navbar {
@@ -511,7 +741,7 @@ main {
   }
 
   .navbar-links ul li {
-    margin: 0 0 0 0;
+    margin: 0;
   }
 
   .navbar-links ul {
@@ -524,7 +754,7 @@ main {
     border-radius: 5px;
     padding: 3px;
     text-decoration: none;
-    margin: 0 0 0 0;
+    margin: 0;
     font-size: 15pt;
     border-radius: 10px;
     transition: all 0.3s;
