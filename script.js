@@ -65,3 +65,21 @@ function resetForm() {
     console.error("Formulário não encontrado.");
   }
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.navbar-links a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+          const targetRect = targetElement.getBoundingClientRect();
+          const targetPosition = targetRect.top + window.scrollY;
+          const offsetPosition = targetPosition - (window.innerHeight / 2) + (targetElement.clientHeight / 2);
+
+          window.scrollTo({
+              top: offsetPosition - 100,
+              behavior: 'smooth'
+          });
+      });
+  });
+});
