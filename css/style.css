@@ -49,6 +49,23 @@
   box-shadow: 0px 18px 29px -8px rgba(0, 0, 0, 0.4);
 }
 
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--navText);
+  margin-left: 30px;
+  z-index: 2;
+}
+
+.menu-toggle .material-symbols-outlined {
+  font-size: 30px;
+}
+
+.navbar-links {
+  display: block;
+}
+
 .navbar-links ul li {
   display: inline-flex;
   margin-right: 10px;
@@ -362,7 +379,6 @@
   text-align: center;
   font-size: 25pt;
   font-family: "Lexend", sans-serif;
-  
 }
 .containerCertificates span {
   margin-right: 10px;
@@ -607,6 +623,7 @@
   resize: vertical;
   transition: border-color 0.3s;
 }
+
 .contact textarea {
   width: auto;
 }
@@ -658,6 +675,7 @@
   display: block;
   width: 100%;
 }
+
 .contact h1 {
   margin: 0 0 20px 0;
   text-align: center;
@@ -667,10 +685,12 @@
   display: flex;
   align-items: center;
 }
-.contact span {
+
+.contact h1 span {
   margin-right: 10px;
   font-size: 25pt;
 }
+
 @media screen and (max-width: 970px) and (min-width: 600px) {
   .myPhoto img {
     width: 80%;
@@ -713,9 +733,10 @@
     max-width: 100%;
   }
 }
+
 @media screen and (max-width: 600px) {
   .myPhoto img {
-    width: 100%;
+    display: none;
   }
   .navbar-logo {
     display: flex;
@@ -725,43 +746,61 @@
     padding: 0;
   }
 
-  .navbar {
-    height: 100px;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+  .menu-toggle {
+    display: block;
   }
 
-  .navbar-links ul li {
-    margin: 0;
+  .navbar {
+    justify-content: space-between;
+    height: 60px;
+    position: fixed;
+    display: flex;
+  }
+
+  .navbar-logo {
+    margin-right: 30px;
+  }
+
+  .navbar-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: var(--navBack);
+    transition: left 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  .navbar-links.active {
+    left: 0;
   }
 
   .navbar-links ul {
-    margin: 10px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 20px;
+    height: 100%;
+    justify-content: center;
+  }
+
+  .navbar-links ul li {
+    display: block;
+    margin: 20px 0;
+    text-align: center;
   }
 
   .navbar-links a {
-    background-color: var(--cor05);
-    border-radius: 5px;
-    padding: 3px;
-    text-decoration: none;
+    width: 100%;
+    padding: 10px;
     margin: 0;
-    font-size: 15pt;
-    border-radius: 10px;
-    transition: all 0.3s;
-    cursor: pointer;
-    height: auto;
-    width: 110px;
-    text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: none;
   }
 
-  .navbar-links a:hover {
-    background-color: var(--cor04);
-    font-size: 15pt;
-  }
-  
   .contact p {
     text-align: left;
     max-width: 100%;
