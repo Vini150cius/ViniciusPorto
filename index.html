@@ -46,13 +46,13 @@
               da primeira oportunidade no mercado
             </p>
             <div class="containerBtns">
-              <button class="btnContact" type="button">
+              <button class="btnContact" type="button" onclick="document.getElementById('contact').scrollIntoView();">
                 <span class="material-symbols-outlined"> mail </span>Contato
               </button>
-              <button class="btnCV" type="button">
+              <a class="btnCV" href="./certificados/CV - Vinicius Porto.pdf" download>
                 <span class="material-symbols-outlined"> download </span>
                 Baixar currículo
-              </button>
+              </a>
             </div>
           </div>
           <div class="myPhoto">
@@ -86,7 +86,7 @@
                 <button
                   type="button"
                   class="btnDemo"
-                  onclick="window.open('nonexistent.html', '_blank')"
+                  onclick="window.open('https://tcc-zeno.onrender.com', '_blank')"
                 >
                   <span class="material-symbols-outlined"> open_in_new </span
                   >Demo
@@ -475,7 +475,7 @@
               <p class="locate">ETEC Martinho di Ciero - Itu</p>
               <p class="date"><span class="material-symbols-outlined calendar">
                 calendar_today
-                </span>Em andamento</p>
+                </span>Dezembro de 2025</p>
                 <button type="button" class="btnCertView"
                 onclick="window.open('nonexistent.html')">
                   <span class="material-symbols-outlined"> open_in_new </span
@@ -489,11 +489,40 @@
                 </span>
               </div>
               
-              <h1>Inglês</h1>
-              <p class="locate">CNA</p>
+              <h1>Inglês Intermediário</h1>
+              <p class="locate">CNA - Itu</p>
+              <p class="date"><span class="material-symbols-outlined calendar">
+                calendar_today
+                </span>Dezembro de 2025</p>
+                <div class="skills">
+                  <span>Inglês</span>
+                  </div>
+                <button type="button" class="btnCertView"
+                onclick="window.open('./certificados/Inglês.pdf', '_blank')">
+                  <span class="material-symbols-outlined"> open_in_new </span
+                  >Ver certificado
+                </button>
+            </div>
+
+            <div class="cardCertificates">
+              <div class="containerIcon">
+                <span class="material-symbols-outlined license">
+                license
+                </span>
+              </div>
+              
+              <h1>Java Completo</h1>
+              <p class="locate">Udemy - Nelio Alves</p>
               <p class="date"><span class="material-symbols-outlined calendar">
                 calendar_today
                 </span>Em andamento</p>
+                <div class="skills">
+                  <span>Java</span>
+                  <span>Spring Boot</span>
+                  <span>POO</span>
+                  <span>JPA / Hibernate</span>
+                  <span>SQL & NoSQL</span>
+                </div>
                 <button type="button" class="btnCertView"
                 onclick="window.open('nonexistent.html')">
                   <span class="material-symbols-outlined"> open_in_new </span
